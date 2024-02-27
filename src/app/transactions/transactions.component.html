@@ -1,0 +1,13 @@
+<div class="container p-4 border mt-5">
+    <div *ngFor="let t of transactions" class="border rounded py-3 d-flex gap-4 p-3">
+        <div class="div">{{t.title}}</div>
+        <div class="div">{{t.amount}}</div>
+        <div class="div">{{t.category}}</div>
+    
+        <div class="d-flex gap-5" >
+            <a href="" [routerLink]="['transaction/',t.id]">view</a>
+            <button (click)="editTransaction(t.id)">Edit</button>
+            <button (click)="destroyTransation(t.id)" type="submit">Delete</button>
+        </div>
+    </div>
+</div>
